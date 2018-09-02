@@ -1,0 +1,14 @@
+- text: Stretch your neck
+  categories:
+    - neck
+    - desk
+- text: Stretch your lower back
+  categories:
+    - back
+- text: Stretch your legs
+  categories:
+    - leg
+- text: Stretch your hands
+  categories:
+    - hand
+    - desk
