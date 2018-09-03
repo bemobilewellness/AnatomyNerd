@@ -35,6 +35,6 @@ class StretchingTips
   end
 
   def config
-    YAML.load_file('./config/stretching_tips.yml')
+    AnatomyNerdConfig.config['stretching_tips']
   end
 end

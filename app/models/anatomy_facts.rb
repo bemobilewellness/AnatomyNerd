@@ -38,6 +38,6 @@ class AnatomyFacts
   end
 
   def config
-    YAML.load_file('./config/anatomy_facts.yml')
+    AnatomyNerdConfig.config['anatomy_facts']
   end
 end

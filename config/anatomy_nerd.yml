@@ -1,0 +1,38 @@
+# Anatomy facts require text and a date
+# The date value is formatted YYYY-MM-DD
+anatomy_facts:
+  - text: The human body has 206 bones
+    date: 2018-08-23
+
+  - text: Our sutures in our heads are mobile even when we are adults
+    date: 2018-09-02
+
+# Monthly themes require text and a month key.
+# The month key value is formatted YYYY-MM
+monthly_themes:
+  - text: Get outside month
+    month: 2018-08
+
+  - text: Keep it stretching
+    month: 2018-09
+
+# Stretching tips require text and an optional list of categories.
+# The categories is a list itself should be one word and all lower case.
+stretching_tips:
+  - text: Stretch your neck
+    categories:
+      - neck
+      - desk
+
+  - text: Stretch your lower back
+    categories:
+      - back
+
+  - text: Stretch your legs
+    categories:
+      - leg
+
+  - text: Stretch your hands
+    categories:
+      - hand
+      - desk

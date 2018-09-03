@@ -34,6 +34,6 @@ class MonthlyThemes
   end
 
   def config
-    YAML.load_file('./config/monthly_themes.yml')
+    AnatomyNerdConfig.config['monthly_themes']
   end
 end
