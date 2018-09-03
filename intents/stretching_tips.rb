@@ -9,7 +9,8 @@ intent 'StretchingTips' do
       response_text = [
         "Sorry, I don't have any stretching tips for the category #{type}.",
         'Here is a random stretching tip instead.',
-        StretchingTips.random
+        StretchingTips.random,
+        SignOff.to_s
       ].join(' ')
 
       tell(response_text)

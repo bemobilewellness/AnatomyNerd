@@ -24,13 +24,10 @@ class AnatomyFacts
   def configured_facts
     config.map do |tip|
       Struct.new(:text, :date) do
-        def to_ssml(prepend_text = '')
+        def to_ssml
           <<~SSML
-            <speak>
-              #{prepend_text}
-              Fact of the day for <say-as interpret-as='date'>#{date.strftime('%Y%m%d')}</say-as>.
-              #{text}
-            </speak>
+            Fact of the day for <say-as interpret-as='date'>#{date.strftime('%Y%m%d')}</say-as>.
+            #{text}
           SSML
         end
       end.new(tip['text'], tip['date'])

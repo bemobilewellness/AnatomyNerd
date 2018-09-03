@@ -22,12 +22,11 @@ class MonthlyThemes
       Struct.new(:text, :month) do
         def to_ssml
           m = Date.parse("#{month}-01")
-          [
-            '<speak>',
-              "Anatomy Nerd's theme for the month of <say-as interpret-as='date'>#{m.strftime('%Y%m')}??</say-as>.",
-              text,
-            '</speak>'
-          ].join(' ')
+          <<~SSML
+            Anatomy Nerd's theme for the month of
+            <say-as interpret-as='date'>#{m.strftime('%Y%m')}??</say-as>.
+            #{text}
+          SSML
         end
       end.new(theme['text'], theme['month'])
     end
