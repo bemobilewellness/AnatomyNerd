@@ -6,19 +6,29 @@ intent 'AnatomyFacts' do
                       [
                         '<speak>',
                         fact_of_the_day.to_ssml,
-                        SignOff.to_s,
+                        SignOff,
                         '</speak>'
                       ].join(' ')
                     else
                       [
+                        '<speak>',
                         'Sorry, there is no fact for the day.',
                         'Instead we have selected a random fact from the past.',
                         AnatomyFacts.random.to_ssml,
-                        SignOff.to_s
+                        SignOff,
+                        '</speak>'
                       ].join(' ')
                     end
     tell(response_text, ssml: true)
   else
-    tell([AnatomyFacts.random.text, SignOff.to_s].join(' '))
+    tell(
+      [
+        '<speak>',
+        AnatomyFacts.random.text,
+        SignOff,
+        '</speak>'
+      ].join(' '),
+      ssml: true
+    )
   end
 end
